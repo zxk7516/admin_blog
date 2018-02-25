@@ -5,7 +5,7 @@ const confirm = Modal.confirm;
 import { Link } from 'react-router-dom';
 import styles from "./Article.css"
 
-export class Article extends React.Component {
+export class Article extends Component {
   constructor() {
     super();
     this.state = {
