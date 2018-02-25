@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://cdn.bootcss.com/antd/3.2.1/antd.min.css" rel="stylesheet">
+    <script>
+        window.API_PATH = "{{ config('app.url') }}/{{ config('admin.api') }}";
+    </script>
 
     <title>Laravel</title>
 </head>
