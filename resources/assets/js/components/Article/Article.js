@@ -41,10 +41,10 @@ export class Article extends React.Component {
     });
   }
   //标题搜索
-  onInputChange = (e) => {
+  onInputChange (e) {
     this.setState({ searchText: e.target.value });
   }
-  onSearch = () => {
+  onSearch (){
     const { searchText } = this.state;
     const reg = new RegExp(searchText, 'gi');
     this.setState({
@@ -68,20 +68,20 @@ export class Article extends React.Component {
       }).filter(record => !!record),
     });
   }
-  showCover = () =>{
+  showCover  () {
     this.setState({
       coverModelVisible: true,
     });
   }
-  handleCancelCoverModel = () =>{
+  handleCancelCoverModel  () {
     this.setState({
       coverModelVisible: false,
     });
   }
-  handleView = (id) =>{
+  handleView  (id) {
     window.open('/articles/' + id)
   }
-  handlePublish = (id) =>{
+  handlePublish (id) {
     var that = this
     axios.get('z/articles/publish/' + id)
     .then(function (response) {
@@ -94,7 +94,7 @@ export class Article extends React.Component {
       console.log(error);
     });
   }
-  handleDelete = (id) =>{
+  handleDelete (id){
     var that = this
     confirm({
       title: '确认删除',

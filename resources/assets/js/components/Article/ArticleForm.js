@@ -52,21 +52,21 @@ export class ArticleForm extends React.Component {
         share_content: nextProps.article.content,
       });
   }
-  handelTitleChange = (e) => {
+  handelTitleChange  (e)  {
     let title = this.refs.title.input.value
     this.setState({title: title})
   }
-  handleChange = (content) => {
+  handleChange (content)  {
     console.log(content);
   }
-  handleHTMLChange = (html) => {
+  handleHTMLChange  (html)  {
     console.log(html);
     this.setState({
       content: html,
       share_content:html
     })
   }
-  uploadFn = (param) => {
+  uploadFn(param) {
     const serverURL = 'z/upload'
     const xhr = new XMLHttpRequest
     const fd = new FormData()
@@ -131,15 +131,15 @@ export class ArticleForm extends React.Component {
       });
     }
   }
-  showShareContentModal = () => {
+  showShareContentModal (){
     this.setState({
       shareContentModalvisible: true,
     });
   }
-  handleShareContentCancel = (e) => {
+  handleShareContentCancel  (e)  {
     this.setState({shareContentModalvisible: false});
   }
-  handleSubmit = (e) => {
+  handleSubmit  (e)  {
     var that = this
     e.preventDefault();
     let title = this.state.title
