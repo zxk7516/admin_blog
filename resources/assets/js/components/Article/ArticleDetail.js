@@ -17,7 +17,7 @@ export class ArticleDetail extends React.Component {
   componentDidMount(props) {
     var that = this
     //获取文章数据
-    axios.get('z/articles/' + this.state.id)
+    axios.get('/admin_api/articles/' + this.state.id)
     .then(function (response) {
       that.setState({
         article:response.data,
@@ -35,7 +35,7 @@ export class ArticleDetail extends React.Component {
       message.error('标题不能为空');
     }else {
       //更新文章
-      axios.post('z/articles', {
+      axios.post('/admin_api/articles', {
         id:this.state.id,
         title:article.title,
         cover:article.cover,

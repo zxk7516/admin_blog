@@ -22,7 +22,7 @@ Route::post('me', 'AuthController@me');
 
 // 文章
 Route::get('/articles', 'ArticleController@index_api');
-Route::post('/article', 'ArticleController@store_api');
+Route::post('/articles', 'ArticleController@store_api');
 Route::post('/articles/update', 'ArticleController@update_api');
 Route::get('/articles/publish/{id}', 'ArticleController@publish_api');
 Route::get('/articles/delete/{id}', 'ArticleController@destroy_api');

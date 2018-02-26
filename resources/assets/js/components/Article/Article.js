@@ -27,7 +27,7 @@ export class Article extends Component {
   fetchData(){
     var that = this
     //获取文章数据
-    axios.get('z/articles')
+    axios.get('/admin_api/articles')
     .then(function (response) {
       //console.log(response.data);
       that.setState({
